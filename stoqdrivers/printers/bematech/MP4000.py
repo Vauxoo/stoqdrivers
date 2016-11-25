@@ -124,7 +124,7 @@ class MP4000(MP25):
                            (self._customer_name, self.get_serial(),
                             self._customer_document,
                             datetime.date.today().strftime('%d%m%y%H%M%S'),
-                            coo))
+                            coo or 0))
 
     def coupon_add_item(self, code, description, price, taxcode,
                         quantity=Decimal("1.0"), unit=UnitType.EMPTY,
